@@ -6,61 +6,114 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    private int slot;
 
-    public Text txt;
-    public Text money;
+    // IMPORTANT DATA
 
-    public int moneys;
+    public string language;
+    public bool isCargarPartida;
+
 
     private void Awake()
     {
+        Application.targetFrameRate = 300;
+
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else if (instance != this)
+        }
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
-        moneys = 10;
-        money.text = "Money: " + moneys;
+
+        DontDestroyOnLoad(this);
     }
 
-
-    public void Win()
+    private void Start()
     {
-        if (Time.timeScale != 0.0f)
+        isCargarPartida = false;
+    }
+    public void setIsCargarPartida(bool value)
+    {
+        isCargarPartida = value;
+    }
+
+    public bool getIsCargarPartida()
+    {
+        return isCargarPartida;
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveData();
+    }
+
+    //Called to start de game
+    public void StartGame(int _slot)
+    {
+        slot = _slot;
+        // IMPORTANT DATA
+
+        SaveData();
+
+        GameManager.instance.LoadScene("IntroGame");
+    }
+
+    public void QuitGame()
+    {
+        SaveData();
+        Application.Quit();
+    }
+
+    public void LoadScene(string nameLevel)
+    {
+        SceneManager.LoadScene(nameLevel);
+    }
+
+    private IEnumerator LoadAsyncScene(string nameLevel)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nameLevel);
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
         {
-            Time.timeScale = 0.0f;
-            txt.text = "Congratulations! You won!";
+            yield return null;
         }
     }
 
-    public void Lose()
+    public void SaveData()
     {
-        if (Time.timeScale != 0.0f)
-        {
-            Time.timeScale = 0.0f;
-            txt.text = "You lost";
-        }
+        // SAVE IMPORTANT DATA
+        //PlayerPrefs.SetInt("helpedWolf" + slot, helpedWolf);
+
+        PlayerPrefs.Save();
     }
 
-    private void Update()
+    public void setSlot(int _slot)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("Map1");
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        slot = _slot;
     }
 
-    public void AddMoney(int mon)
+    public void LoadData(int _slot)
     {
-        moneys += mon;
-        money.text = "Money: " + moneys;
+        slot = _slot;
+        // helpedWolf = PlayerPrefs.GetInt("helpedWolf" + helpedWolf);
     }
 
+    public int existeSlotPartidaGuardada(int _slot)
+    {
+        return PlayerPrefs.GetInt("Game" + _slot);
+    }
+
+    public int getDiaPartidaGuardada(int _slot)
+    {
+        return PlayerPrefs.GetInt("Game" + _slot);
+    }
+
+    public void setLanguage(string lg)
+    {
+        this.language = lg;
+        LoadScene("MainMenu");
+    }
 }
