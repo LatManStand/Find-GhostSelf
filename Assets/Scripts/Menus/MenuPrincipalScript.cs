@@ -43,23 +43,28 @@ public class MenuPrincipalScript : MonoBehaviour
 
     public void Menu1()
     {
-        //GameManager.instance.setIsCargarPartida(false);
+        GameManager.instance.setIsCargarPartida(false);
         menu1.SetActive(true);
         menu2.SetActive(false);
     }
 
     public void EmpezarPartida()
     {
-        //GameManager.instance.setIsCargarPartida(false);
+        GameManager.instance.setIsCargarPartida(false);
         menu1.SetActive(false);
         menu2.SetActive(true);
     }
 
     public void CargarPartida()
     {
-        //GameManager.instance.setIsCargarPartida(true);
+        GameManager.instance.setIsCargarPartida(true);
         menu1.SetActive(false);
         menu2.SetActive(true);
+    }
+
+    public void CargarSlot(int slot)
+    {
+        //TO-DO
     }
 
     public void GoToCredits()

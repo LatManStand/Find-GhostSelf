@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 91291898}
   - component: {fileID: 91291897}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 238814178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 198b8c350d8a7864abda9e949bae9f6b, type: 3}
+  m_Script: {fileID: 11500000, guid: e5bfb045bd774a34ebe18b5b9be764f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menu1: {fileID: 1725843898}
@@ -738,7 +738,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 2
+  serializedVersion: 3
   m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 0
   m_EnableRealtimeLightmaps: 0
@@ -760,7 +760,7 @@ LightingSettings:
   m_MixedBakeMode: 2
   m_LightmapsBakeMode: 1
   m_FilterMode: 1
-  m_LightmapParameters: {fileID: 0}
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
   m_ExportTrainingData: 0
   m_TrainingDataDestination: TrainingData
   m_RealtimeResolution: 2
@@ -777,7 +777,7 @@ LightingSettings:
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
-  m_PVRRussianRouletteStartBounce: 2
+  m_PVRMinBounces: 1
   m_PVREnvironmentMIS: 0
   m_PVRFilteringMode: 2
   m_PVRDenoiserTypeDirect: 0
@@ -805,8 +805,8 @@ GameObject:
   - component: {fileID: 314492238}
   - component: {fileID: 314492237}
   - component: {fileID: 314492235}
-  - component: {fileID: 314492236}
   - component: {fileID: 314492234}
+  - component: {fileID: 314492236}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -879,7 +879,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 314492236}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -895,7 +895,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 314492236}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -916,10 +916,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 314492232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2d2df25f61f4f4ca452e1630fe2367, type: 3}
+  m_Script: {fileID: 11500000, guid: 07219a02da76096428bc60e55147fabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 1
+  slot: 0
   barra1: {fileID: 1156795763}
   barra2: {fileID: 202762827}
   texto1: {fileID: 492219133}
@@ -937,6 +937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -966,14 +967,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 314492236}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ActionButton
-        m_Mode: 1
+      - m_Target: {fileID: 238814180}
+        m_TargetAssemblyTypeName: MenuPrincipalScript, Assembly-CSharp
+        m_MethodName: CargarSlot
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: IntroCaso
           m_BoolArgument: 0
@@ -1345,8 +1346,8 @@ GameObject:
   - component: {fileID: 546786099}
   - component: {fileID: 546786098}
   - component: {fileID: 546786097}
-  - component: {fileID: 546786096}
   - component: {fileID: 546786095}
+  - component: {fileID: 546786096}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1411,7 +1412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 546786093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2d2df25f61f4f4ca452e1630fe2367, type: 3}
+  m_Script: {fileID: 11500000, guid: 07219a02da76096428bc60e55147fabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slot: 1
@@ -1435,7 +1436,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546786096}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -1451,7 +1452,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546786096}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -1477,6 +1478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1506,10 +1508,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 546786096}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ActionButton
-        m_Mode: 1
+      - m_Target: {fileID: 238814180}
+        m_TargetAssemblyTypeName: MenuPrincipalScript, Assembly-CSharp
+        m_MethodName: CargarSlot
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1614,6 +1616,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &579377138
 Canvas:
   m_ObjectHideFlags: 0
@@ -1735,7 +1738,7 @@ GameObject:
   - component: {fileID: 701198698}
   - component: {fileID: 701198697}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Menu_background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2047,11 +2050,11 @@ GameObject:
   - component: {fileID: 1083758018}
   - component: {fileID: 1083758017}
   - component: {fileID: 1083758016}
-  - component: {fileID: 1083758020}
   - component: {fileID: 1083758021}
   - component: {fileID: 1083758019}
+  - component: {fileID: 1083758020}
   m_Layer: 5
-  m_Name: Button
+  m_Name: NewGame_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2070,7 +2073,7 @@ RectTransform:
   m_Children:
   - {fileID: 782271412}
   m_Father: {fileID: 1725843899}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2091,6 +2094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2205,11 +2209,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1083758014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8611b0d10a024a83f459a43f14e18, type: 3}
+  m_Script: {fileID: 11500000, guid: d99d1e76c07d2cf46a7db8353c4b70ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 782271413}
-  numTam: 2
+  numTam: 5
   tamOrigin: 0
 --- !u!114 &1083758021
 MonoBehaviour:
@@ -2228,7 +2232,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1083758020}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -2244,7 +2248,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1083758020}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -2410,6 +2414,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156795763}
   m_CullTransparentMesh: 0
+--- !u!1 &1265929607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265929609}
+  - component: {fileID: 1265929608}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1265929608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265929607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9ec617e9136034a889fb278ce6209a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 
+  isCargarPartida: 0
+--- !u!4 &1265929609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265929607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 783.1926, y: 257.258, z: -37.513206}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1345099030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,7 +2471,7 @@ GameObject:
   - component: {fileID: 1345099033}
   - component: {fileID: 1345099032}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GameTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2436,15 +2485,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345099030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.4999437}
-  m_LocalScale: {x: 1.0000792, y: 1.1260766, z: 1.0000792}
+  m_LocalPosition: {x: 0, y: 0, z: -5.4999433}
+  m_LocalScale: {x: 1.0000792, y: 1.1260765, z: 1.0000792}
   m_Children: []
-  m_Father: {fileID: 1725843899}
-  m_RootOrder: 2
+  m_Father: {fileID: 1706353050}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 99}
+  m_AnchoredPosition: {x: 0, y: -12.999992}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1345099032
@@ -2480,7 +2529,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Starbearer
+  m_Text: TITLE
 --- !u!222 &1345099033
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2580,11 +2629,11 @@ GameObject:
   - component: {fileID: 1508014574}
   - component: {fileID: 1508014573}
   - component: {fileID: 1508014572}
-  - component: {fileID: 1508014571}
   - component: {fileID: 1508014570}
   - component: {fileID: 1508014569}
+  - component: {fileID: 1508014571}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: LoadGame_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2603,7 +2652,7 @@ RectTransform:
   m_Children:
   - {fileID: 112822009}
   m_Father: {fileID: 1725843899}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2653,7 +2702,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1508014571}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -2669,7 +2718,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1508014571}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -2690,11 +2739,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1508014567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8611b0d10a024a83f459a43f14e18, type: 3}
+  m_Script: {fileID: 11500000, guid: d99d1e76c07d2cf46a7db8353c4b70ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 112822010}
-  numTam: 2
+  numTam: 5
   tamOrigin: 0
 --- !u!114 &1508014572
 MonoBehaviour:
@@ -2710,6 +2759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2876,11 +2926,11 @@ GameObject:
   - component: {fileID: 1535195639}
   - component: {fileID: 1535195638}
   - component: {fileID: 1535195637}
-  - component: {fileID: 1535195636}
   - component: {fileID: 1535195635}
   - component: {fileID: 1535195634}
+  - component: {fileID: 1535195636}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Credits_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2899,7 +2949,7 @@ RectTransform:
   m_Children:
   - {fileID: 1117249186}
   m_Father: {fileID: 1725843899}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2949,7 +2999,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1535195636}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -2965,7 +3015,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1535195636}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -2986,11 +3036,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535195632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8611b0d10a024a83f459a43f14e18, type: 3}
+  m_Script: {fileID: 11500000, guid: d99d1e76c07d2cf46a7db8353c4b70ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1117249187}
-  numTam: 2
+  numTam: 5
   tamOrigin: 0
 --- !u!114 &1535195637
 MonoBehaviour:
@@ -3006,6 +3056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3299,7 +3350,7 @@ GameObject:
   - component: {fileID: 1706353052}
   - component: {fileID: 1706353051}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3315,7 +3366,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1345099031}
   m_Father: {fileID: 1725843899}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3391,7 +3443,6 @@ RectTransform:
   m_Children:
   - {fileID: 1706353050}
   - {fileID: 701198696}
-  - {fileID: 1345099031}
   - {fileID: 1083758015}
   - {fileID: 1508014568}
   - {fileID: 1535195633}
@@ -3417,8 +3468,8 @@ GameObject:
   - component: {fileID: 1750831337}
   - component: {fileID: 1750831336}
   - component: {fileID: 1750831335}
-  - component: {fileID: 1750831334}
   - component: {fileID: 1750831333}
+  - component: {fileID: 1750831334}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -3483,10 +3534,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750831331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2d2df25f61f4f4ca452e1630fe2367, type: 3}
+  m_Script: {fileID: 11500000, guid: 07219a02da76096428bc60e55147fabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot: 1
+  slot: 2
   barra1: {fileID: 29538413}
   barra2: {fileID: 514637279}
   texto1: {fileID: 1026723588}
@@ -3507,7 +3558,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1750831334}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -3523,7 +3574,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1750831334}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -3549,6 +3600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3578,14 +3630,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750831334}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ActionButton
-        m_Mode: 1
+      - m_Target: {fileID: 238814180}
+        m_TargetAssemblyTypeName: MenuPrincipalScript, Assembly-CSharp
+        m_MethodName: CargarSlot
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: IntroCaso
           m_BoolArgument: 0
@@ -3640,11 +3692,11 @@ GameObject:
   - component: {fileID: 1764772285}
   - component: {fileID: 1764772284}
   - component: {fileID: 1764772283}
-  - component: {fileID: 1764772282}
   - component: {fileID: 1764772281}
   - component: {fileID: 1764772280}
+  - component: {fileID: 1764772282}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Quit_btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3663,7 +3715,7 @@ RectTransform:
   m_Children:
   - {fileID: 518927073}
   m_Father: {fileID: 1725843899}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3713,7 +3765,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1764772282}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -3729,7 +3781,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1764772282}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: 
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -3750,11 +3802,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764772278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e8611b0d10a024a83f459a43f14e18, type: 3}
+  m_Script: {fileID: 11500000, guid: d99d1e76c07d2cf46a7db8353c4b70ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 518927074}
-  numTam: 2
+  numTam: 5
   tamOrigin: 0
 --- !u!114 &1764772283
 MonoBehaviour:
@@ -3770,6 +3822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3943,6 +3996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
