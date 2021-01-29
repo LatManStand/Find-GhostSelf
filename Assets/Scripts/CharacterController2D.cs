@@ -6,7 +6,6 @@ public class CharacterController2D : MonoBehaviour
     [Header("Movement")]
     public bool canMove = true;
     public float maxSpeed = 15f;
-    public bool lookToMouse;
     public string movementAxis;
     private bool _facingRight = true;
 
@@ -17,13 +16,23 @@ public class CharacterController2D : MonoBehaviour
     public float jumpForce = 1700f;
     public bool hasDoubleJump;
     private bool _doubleJump;
-    private bool _grounded;
+    public bool _grounded;
     public Transform groundCheck;
     private float groundRadious = 0.2f;
     public LayerMask whatIsGround;
     private bool wasGrounded = false;
+
+
     public GameObject particlesObj;
-    private ParticleSystem particles;
+    public float fallHeightForParticles;
+    private float jumpStartHeight;
+    private Rigidbody2D rb;
+    private float jumpMaxHeight;
+    private GameObject instanciatedParticles;
+
+    private SpriteRenderer sr;
+
+
 
     // others
     private Animator _anim;
@@ -32,7 +41,8 @@ public class CharacterController2D : MonoBehaviour
     void Start()
     {
         _anim = GetComponent<Animator>();
-        particles = particlesObj.GetComponent<ParticleSystem>();
+        rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -43,9 +53,21 @@ public class CharacterController2D : MonoBehaviour
             wasGrounded = _grounded;
             CheckJump();
             _grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadious, whatIsGround);
-            if(!wasGrounded && _grounded)
+            if (!wasGrounded && _grounded)
             {
-                //Instantiate(particles, transform).Play();
+                jumpStartHeight = -99999f;
+                if (jumpMaxHeight > transform.position.y + fallHeightForParticles)
+                {
+                    instanciatedParticles = Instantiate(particlesObj, particlesObj.transform.position, particlesObj.transform.rotation);
+                    instanciatedParticles.GetComponent<TimedDestroy>().CallDestroy();
+                    instanciatedParticles.GetComponent<ParticleSystem>().Play();
+                }
+            }
+            else if (!_grounded && wasGrounded)
+            {
+                jumpStartHeight = transform.position.y;
+                StopCoroutine(nameof(HighestHeight));
+                StartCoroutine(nameof(HighestHeight));
             }
         }
         if (canMove)
@@ -63,20 +85,7 @@ public class CharacterController2D : MonoBehaviour
         int direction = _facingRight ? 1 : -1;
         transform.Translate(move * maxSpeed * direction * Time.deltaTime, 0, 0);
 
-        if (!lookToMouse && ((move > 0 && !_facingRight) || (move < 0 && _facingRight)))
-        {
-            Flip();
-        }
-
-        if (lookToMouse)
-        {
-            float mouseXPos = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-            if ((transform.position.x < mouseXPos && !_facingRight) || (transform.position.x > mouseXPos && _facingRight))
-            {
-                Flip();
-            }
-        }
-        else if ((move > 0 && !_facingRight) || (move < 0 && _facingRight))
+        if ((move > 0 && !_facingRight) || (move < 0 && _facingRight))
         {
             Flip();
         }
@@ -91,6 +100,7 @@ public class CharacterController2D : MonoBehaviour
     {
         _facingRight = !_facingRight;
         transform.Rotate(new Vector3(0, 180, 0), Space.World);
+        //sr.flipX = !sr.flipX;
     }
 
     private void CheckJump()
@@ -101,8 +111,11 @@ public class CharacterController2D : MonoBehaviour
             {
                 _jumpKeyPressed = true;
                 _grounded = false;
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0.0f, 0.0f);
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+                rb.velocity = new Vector2(0.0f, 0.0f);
+                rb.AddForce(new Vector2(0, jumpForce));
+                jumpStartHeight = transform.position.y;
+                StopCoroutine(nameof(HighestHeight));
+                StartCoroutine(nameof(HighestHeight));
                 if (!_doubleJump && !_grounded)
                 {
                     _doubleJump = true;
@@ -120,4 +133,17 @@ public class CharacterController2D : MonoBehaviour
             _jumpKeyPressed = false;
         }
     }
+
+    private IEnumerator HighestHeight()
+    {
+        jumpMaxHeight = jumpStartHeight;
+        while (rb.velocity.y > 0)
+        {
+            yield return null;
+        }
+        jumpMaxHeight = transform.position.y;
+    }
+
+
+
 }
