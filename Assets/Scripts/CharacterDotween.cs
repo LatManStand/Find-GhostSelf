@@ -10,7 +10,7 @@ public class CharacterDotween : MonoBehaviour
     private SpriteRenderer sr;
     void Start()
     {
-        transform.DOMoveY(transform.position.y + sway, duration)
+        transform.DOLocalMoveY(sway, duration)
             .SetEase(Ease.InOutQuad)
             .SetLoops(-1,LoopType.Yoyo);
     }
