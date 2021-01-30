@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2420593123720527652}
   m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 20.4035, y: 0.38719988, z: 0}
-  m_LocalScale: {x: 8.620398, y: 7.7147017, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 2420593125641194594}
   m_Father: {fileID: 0}
@@ -73,9 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a,
-    type: 3}
+  m_SortingOrder: -6
+  m_Sprite: {fileID: 21300000, guid: 85fd43929c69de44e956b4ebee0028ee, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +102,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.5}
+    oldSize: {x: 9.14, y: 10.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -111,14 +110,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.02734375, y: 0.25}
-      - {x: -0.5, y: 0.02734375}
-      - {x: -0.5, y: -0.015625}
-      - {x: -0.0703125, y: -0.25}
-      - {x: 0.02734375, y: -0.25}
-      - {x: 0.5, y: -0.02734375}
-      - {x: 0.5, y: 0.015625}
-      - {x: 0.0703125, y: 0.25}
+    - - {x: -0.13446845, y: 4.7535615}
+      - {x: -3.621099, y: -4.1333504}
+      - {x: 3.931188, y: -3.9304328}
 --- !u!114 &2420593123720527656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e53f34204daa1b6488148a35b96c4d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 3
   colors:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
@@ -185,13 +179,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2420593125641194593}
-  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: -0.5058041, y: 0, z: 0}
-  m_LocalScale: {x: 0.12243574, y: 0.12243574, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.013089582, w: 0.99991435}
+  m_LocalPosition: {x: -0.17, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 2420593123720527655}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.5}
 --- !u!212 &2420593125641194597
 SpriteRenderer:
   m_ObjectHideFlags: 0
