@@ -30,7 +30,6 @@ public class CharacterController2D : MonoBehaviour
     private float jumpMaxHeight;
     private GameObject instanciatedParticles;
 
-    private SpriteRenderer sr;
 
 
 
@@ -42,7 +41,6 @@ public class CharacterController2D : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

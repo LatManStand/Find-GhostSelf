@@ -33,7 +33,7 @@ public class Light : MonoBehaviour
         {
             triggered = true;
             character = collision.gameObject;
-            sr = character.GetComponent<SpriteRenderer>();
+            sr = character.GetComponentInChildren<SpriteRenderer>();
         }
     }
 
