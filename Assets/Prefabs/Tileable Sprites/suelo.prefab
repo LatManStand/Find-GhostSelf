@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3703642525963201942}
   - component: {fileID: 542486496126842661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: suelo
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

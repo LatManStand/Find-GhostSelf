@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3166800200168977276}
   - component: {fileID: 4107579360519502462}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rodapie-escayola
   m_TagString: Untagged
   m_Icon: {fileID: 0}

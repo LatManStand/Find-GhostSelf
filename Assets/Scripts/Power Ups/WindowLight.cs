@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Light : MonoBehaviour
+public class WindowLight : MonoBehaviour
 {
     private bool triggered;
     private GameObject character;
@@ -45,8 +45,6 @@ public class Light : MonoBehaviour
             color.a = 0f;
             sr.color = color;
             triggered = false;
-            character = null;
-            sr = null;
         }
     }
 }

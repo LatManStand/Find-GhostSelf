@@ -44,7 +44,6 @@ public class Radio : MonoBehaviour
         {
             aS.volume = 0f;
             triggered = false;
-            character = null;
         }
     }
 
