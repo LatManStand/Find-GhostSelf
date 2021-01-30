@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class CameraUV : MonoBehaviour
 {
@@ -9,11 +10,12 @@ public class CameraUV : MonoBehaviour
 
     private bool triggered;
     private float timeTriggered;
-    private SpriteRenderer sr;
+    //private SpriteRenderer sr;
+    private Light2D sr;
 
     private void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponentInChildren<Light2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

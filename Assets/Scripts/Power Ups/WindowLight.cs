@@ -28,7 +28,8 @@ public class WindowLight : MonoBehaviour
         {
             color = sr.color;
             //float aux = (character.transform.position - transform.position).magnitude;
-            color.a = Mathf.LerpUnclamped(1f, 0f, Mathf.Pow((character.transform.position - transform.position).magnitude, 2) / col.radius) * alphaMultiplier;
+            color.a = Mathf.LerpUnclamped(1f, 0f, (character.transform.position - transform.position).magnitude / col.radius) * alphaMultiplier;
+            //color.a = Mathf.LerpUnclamped(1f, 0f, Mathf.Pow((character.transform.position - transform.position).magnitude, 2) / col.radius) * alphaMultiplier;
             sr.color = color;
             demonLight.intensity = Mathf.LerpUnclamped(1f, 0f, Mathf.Pow((character.transform.position - transform.position).magnitude, 2) / col.radius) - topDemonLight;
             if (demonLight.intensity <= 0f)
