@@ -46,20 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topDemonLight: 0.5
   alphaMultiplier: 0.7
---- !u!114 &1706573488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6596263341867382132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0264779e8a8ded84b945595e2f5c3e7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  topDemonLight: 0.5
-  alphaMultiplier: 0.7
 --- !u!1001 &229455126229172292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -90,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 6387672961744631088, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_Name
-      value: ventana Variant (3)
+      value: ventana
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
@@ -115,17 +101,17 @@ PrefabInstance:
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.718472
+      value: 112.23
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.883863
+      value: 4.79
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.502659
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
