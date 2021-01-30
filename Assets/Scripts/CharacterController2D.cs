@@ -56,7 +56,7 @@ public class CharacterController2D : MonoBehaviour
                 jumpStartHeight = -99999f;
                 if (jumpMaxHeight > transform.position.y + fallHeightForParticles)
                 {
-                    instanciatedParticles = Instantiate(particlesObj, particlesObj.transform.position, particlesObj.transform.rotation);
+                    instanciatedParticles = Instantiate(particlesObj, groundCheck.transform.position, particlesObj.transform.rotation);
                     instanciatedParticles.GetComponent<TimedDestroy>().CallDestroy();
                     instanciatedParticles.GetComponent<ParticleSystem>().Play();
                 }

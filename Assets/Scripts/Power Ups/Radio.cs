@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Light : MonoBehaviour
+public class Radio : MonoBehaviour
 {
+
     private bool triggered;
     private GameObject character;
-    private SpriteRenderer sr;
+    private AudioSource aS;
+    private AudioClip ac;
     private CircleCollider2D col;
-    private Color color;
 
     private void Start()
     {
         col = GetComponent<CircleCollider2D>();
+        aS = GetComponent<AudioSource>();
+        ac = aS.clip;
+        Loop();
     }
 
     // Update is called once per frame
@@ -20,10 +24,8 @@ public class Light : MonoBehaviour
     {
         if (triggered)
         {
-            color = sr.color;
             //float aux = (character.transform.position - transform.position).magnitude;
-            color.a = Mathf.LerpUnclamped(1f, 0f, (character.transform.position - transform.position).magnitude / col.radius);
-            sr.color = color;
+            aS.volume = Mathf.Sqrt(Mathf.LerpUnclamped(1f, 0f, (character.transform.position - transform.position).magnitude / col.radius));
         }
     }
 
@@ -33,7 +35,6 @@ public class Light : MonoBehaviour
         {
             triggered = true;
             character = collision.transform.GetChild(0).gameObject;
-            sr = character.GetComponentInChildren<SpriteRenderer>();
         }
     }
 
@@ -41,12 +42,15 @@ public class Light : MonoBehaviour
     {
         if (triggered && collision.gameObject.CompareTag("Character"))
         {
-            color = sr.color;
-            color.a = 0f;
-            sr.color = color;
+            aS.volume = 0f;
             triggered = false;
             character = null;
-            sr = null;
         }
+    }
+
+    private void Loop()
+    {
+        aS.PlayOneShot(ac);
+        Invoke(nameof(Loop), aS.clip.length - 0.4f);
     }
 }
