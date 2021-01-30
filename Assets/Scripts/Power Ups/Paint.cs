@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Paint : MonoBehaviour
 {
-    public GameObject leftFoot;
-    public GameObject rightFoot;
+    public GameObject leftFootRight;
+    public GameObject leftFootLeft;
+    public GameObject rightFootRight;
+    public GameObject rightFootLeft;
     private GameObject instantiatedFoot;
 
     private Transform groundCheck;
@@ -38,18 +40,34 @@ public class Paint : MonoBehaviour
         {
             currentDistance += Mathf.Abs(groundCheck.position.x - lastXPosition);
             lastXPosition = groundCheck.position.x;
-            if (currentDistance > distancePerStep)//&& lastStepTime + minimumStepTime < Time.time)
+            if (currentDistance > distancePerStep)
             {
                 if (charContr._grounded)
                 {
                     currentDistance = 0f;
                     if (currentSteps % 2 == 0)
                     {
-                        instantiatedFoot = Instantiate(leftFoot, groundCheck.position, groundCheck.rotation);
+                        if (groundCheck.rotation == Quaternion.identity)
+                        {
+
+                            instantiatedFoot = Instantiate(leftFootRight, groundCheck.position, groundCheck.rotation);
+                        }
+                        else
+                        {
+                            instantiatedFoot = Instantiate(leftFootLeft, groundCheck.position, groundCheck.rotation);
+                        }
                     }
                     else
                     {
-                        instantiatedFoot = Instantiate(rightFoot, groundCheck.position, groundCheck.rotation);
+                        if (groundCheck.rotation == Quaternion.identity)
+                        {
+
+                            instantiatedFoot = Instantiate(rightFootRight, groundCheck.position, groundCheck.rotation);
+                        }
+                        else
+                        {
+                            instantiatedFoot = Instantiate(rightFootLeft, groundCheck.position, groundCheck.rotation);
+                        }
                     }
                     instantiatedFoot.GetComponent<ParticleSystem>().Play();
                     instantiatedFoot.GetComponent<TimedDestroy>().CallDestroy();
@@ -58,8 +76,6 @@ public class Paint : MonoBehaviour
                     if (currentSteps == steps)
                     {
                         triggered = false;
-                        
-                        //Destroy(this);
                     }
                 }
             }

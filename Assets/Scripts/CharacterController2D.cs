@@ -30,6 +30,8 @@ public class CharacterController2D : MonoBehaviour
     private float jumpMaxHeight;
     private GameObject instanciatedParticles;
 
+    private AudioSource aS;
+
 
 
 
@@ -41,6 +43,7 @@ public class CharacterController2D : MonoBehaviour
     {
         _anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        aS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,9 +54,10 @@ public class CharacterController2D : MonoBehaviour
             wasGrounded = _grounded;
             CheckJump();
             _grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadious, whatIsGround);
-            if (!wasGrounded && _grounded)
+            if (!wasGrounded && _grounded && rb.velocity.y <= 0.1f)
             {
                 jumpStartHeight = -99999f;
+                aS.PlayOneShot(aS.clip);
                 if (jumpMaxHeight > transform.position.y + fallHeightForParticles)
                 {
                     instanciatedParticles = Instantiate(particlesObj, groundCheck.transform.position, particlesObj.transform.rotation);

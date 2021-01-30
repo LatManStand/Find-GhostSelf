@@ -123,9 +123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a68421321e54b044882f1248ea16ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftFoot: {fileID: 7867236472546830419, guid: baa79ed0b5070e44da8fca672c264201,
+  leftFootRight: {fileID: 7867236472546830419, guid: baa79ed0b5070e44da8fca672c264201,
     type: 3}
-  rightFoot: {fileID: 7867236472546830419, guid: f901ab82826f0aa4196844ff15ed1c06,
+  leftFootLeft: {fileID: 7867236472546830419, guid: 22d71b3568a20ae4a8a93fe876cb34b0,
+    type: 3}
+  rightFootRight: {fileID: 7867236472546830419, guid: f901ab82826f0aa4196844ff15ed1c06,
+    type: 3}
+  rightFootLeft: {fileID: 7867236472546830419, guid: 0c0b69040d5dc8b478eee8267d4d6801,
     type: 3}
   steps: 4
-  distancePerStep: 2
+  distancePerStep: 3
