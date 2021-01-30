@@ -25,7 +25,7 @@ public class CameraF : MonoBehaviour
         {
             triggered = true;
             lastFlash = Time.time;
-            sr = collision.gameObject.GetComponent<SpriteRenderer>();
+            sr = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
             currentAlpha = initialAlpha;
             auxColor = cameraFlash.color;
             auxColor.a = currentAlpha / 2;
