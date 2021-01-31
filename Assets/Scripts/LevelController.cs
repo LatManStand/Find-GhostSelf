@@ -23,7 +23,7 @@ public class LevelController : MonoBehaviour
     public GameObject canvasCharacter;
     private CharacterController2D character;
     public Text UIText;
-
+    public AudioSource openAudioDoor;
 
 
 
@@ -71,6 +71,11 @@ public class LevelController : MonoBehaviour
 
     public void loadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        GameManager.instance.LoadScene(scene);
+    }
+
+    public void playSound()
+    {
+        openAudioDoor.Play();
     }
 }
