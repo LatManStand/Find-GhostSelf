@@ -33,7 +33,7 @@ public class MenuPrincipalScript : MonoBehaviour
         video.SetActive(true);
         backgroud.SetActive(false);
         yield return new WaitForSeconds(3.0f);
-        GameManager.instance.LoadScene("Tutorial");
+        GameManager.instance.LoadScene("Controls");
     }
 
     public void GoToCredits()
