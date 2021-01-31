@@ -3975,22 +3975,32 @@ PrefabInstance:
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[0].textoo
-      value: "Nice! It\u2019s still clean."
+      value: 'Thank heavens I found you! '
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[1].textoo
-      value: 'Like daddy would say:'
+      value: "Coronel, are you okay? I hope nobody\u2019s hurt you."
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[2].textoo
-      value: "\u201CYou\u2019re never fully dressed without a beautiful smile.\u201D "
+      value: "Oh God, Coronel, you\u2019ve lost an eye!  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: textos.Array.data[3].textoo
+      value: 'Thank God mommy taught me how to mend you in cases like this.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: textos.Array.data[4].textoo
+      value: "After we finish playing, you\u2019ll be as good as new!"
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
@@ -4000,11 +4010,21 @@ PrefabInstance:
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[1].duracion
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[2].duracion
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: textos.Array.data[3].duracion
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: textos.Array.data[4].duracion
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
@@ -4020,6 +4040,16 @@ PrefabInstance:
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[2].indexSigTexto
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: textos.Array.data[3].indexSigTexto
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: textos.Array.data[4].indexSigTexto
       value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
