@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/HorseRoom.unity
     guid: 5742c141e432fc8448f313d3c7fc1eff
   - enabled: 1
-    path: Assets/Scenes/Ending (WIP).unity
+    path: Assets/Scenes/Ending.unity
     guid: 4a542cee4daa086469e38fb4265c11a6
   m_configObjects: {}
