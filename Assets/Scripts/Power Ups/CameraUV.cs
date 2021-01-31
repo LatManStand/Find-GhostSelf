@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Experimental.Rendering.Universal;
 
 public class CameraUV : MonoBehaviour
@@ -52,6 +53,7 @@ public class CameraUV : MonoBehaviour
         {
             //Pasan que cosas
             sr.sprite = triggeredSprite;
+            GameManager.instance.LoadScene(SceneManager.GetActiveScene().name);
 
         }
     }
