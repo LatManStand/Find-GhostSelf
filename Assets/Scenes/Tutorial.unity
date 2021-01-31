@@ -29099,7 +29099,7 @@ PrefabInstance:
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[0].textoo
-      value: " Oh, wow! More strangers who wanna find me\u2026"
+      value: "Oh, wow! More strangers who wanna find me\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}

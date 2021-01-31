@@ -3621,12 +3621,12 @@ PrefabInstance:
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[1].textoo
-      value: "Colonel, are you okay? I hope nobody\u2019s hurt you."
+      value: "Coronel, are you okay? I hope nobody\u2019s hurt you."
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
       propertyPath: textos.Array.data[2].textoo
-      value: "Oh God, Colonel, you\u2019ve lost an eye!  "
+      value: "Oh God, Coronel, you\u2019ve lost an eye!  "
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
