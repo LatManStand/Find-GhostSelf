@@ -484,17 +484,17 @@ PrefabInstance:
     - target: {fileID: 4866159174939943201, guid: 4b081be6fdbb9514fba5ab3f50ec0267,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4866159174939943201, guid: 4b081be6fdbb9514fba5ab3f50ec0267,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.181496
+      value: 82.75
       objectReference: {fileID: 0}
     - target: {fileID: 4866159174939943201, guid: 4b081be6fdbb9514fba5ab3f50ec0267,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.232819
+      value: 19.85
       objectReference: {fileID: 0}
     - target: {fileID: 4866159174939943201, guid: 4b081be6fdbb9514fba5ab3f50ec0267,
         type: 3}
@@ -2646,7 +2646,7 @@ MonoBehaviour:
   eventos:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683553311}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: loadScene
         m_Mode: 5
@@ -5224,7 +5224,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &562312814
 PrefabInstance:
@@ -10349,7 +10349,7 @@ RectTransform:
   m_Children:
   - {fileID: 1673160312}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10595,6 +10595,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22a1e4823193daf4c8886a7c7aa8faad, type: 3}
+--- !u!114 &683553311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1444820041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50f7b5eb17b7b04eb01a7c4c8b0bb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &697047598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14169,7 +14181,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 58
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1171770123
 PrefabInstance:
@@ -15983,7 +15995,7 @@ MonoBehaviour:
   eventos:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683553311}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: loadScene
         m_Mode: 5
@@ -17768,7 +17780,7 @@ Transform:
   m_LocalScale: {x: 18.508778, y: 9.818556, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1531552114 stripped
 Transform:
@@ -18043,7 +18055,7 @@ Transform:
   - {fileID: 875474980}
   - {fileID: 1534659075}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1576368679
 GameObject:
@@ -18807,7 +18819,7 @@ MonoBehaviour:
   eventos:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683553311}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: playSound
         m_Mode: 1
@@ -19666,7 +19678,7 @@ Transform:
   - {fileID: 1746676957}
   - {fileID: 1232187567}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1746676956
 PrefabInstance:
@@ -20733,7 +20745,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1893461571
 PrefabInstance:
@@ -22050,7 +22062,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 57
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999085187
 GameObject:
@@ -28346,7 +28358,7 @@ MonoBehaviour:
   eventos:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683553311}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: playSound
         m_Mode: 1
