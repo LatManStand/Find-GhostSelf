@@ -48,6 +48,7 @@ MonoBehaviour:
   isCargarPartida: 0
   hasHorse: 0
   hasToothbrush: 0
+  audiosrc: {fileID: 5786509552221196946}
 --- !u!82 &5786509552221196946
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61,7 +62,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 91da8828e54b0f9458da62ea68714537, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.33
   m_Pitch: 1
   Loop: 1
   Mute: 0

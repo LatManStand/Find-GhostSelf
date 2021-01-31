@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public bool hasHorse = false;
     public bool hasToothbrush = false;
+    public AudioSource audiosrc;
 
     private void Awake()
     {
@@ -71,6 +72,11 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string nameLevel)
     {
+        if (nameLevel.Equals("Ending"))
+        {
+            audiosrc.Stop();
+        }
+
         SceneManager.LoadScene(nameLevel);
     }
 

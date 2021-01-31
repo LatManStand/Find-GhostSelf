@@ -71,7 +71,7 @@ public class LevelController : MonoBehaviour
 
     public void loadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        GameManager.instance.LoadScene(scene);
     }
 
     public void playSound()
