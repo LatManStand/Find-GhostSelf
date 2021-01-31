@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 6387672961744631088, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_Name
-      value: ventana
+      value: ventana Variant (4)
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
@@ -101,17 +101,17 @@ PrefabInstance:
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 112.23
+      value: -17.718472
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.79
+      value: -11.883863
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 30.502659
       objectReference: {fileID: 0}
     - target: {fileID: 6387672961744631090, guid: 593f2cf62f51bb144b69991de056dd22,
         type: 3}

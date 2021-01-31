@@ -29296,6 +29296,11 @@ PrefabInstance:
       objectReference: {fileID: 1056206191}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
+      propertyPath: openAudioDoor
+      value: 
+      objectReference: {fileID: 909692044173748566}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
       propertyPath: canvasCharacter
       value: 
       objectReference: {fileID: 146126884}
@@ -29528,3 +29533,9 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &909692044173748566 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 103181529361807672, guid: 589abb28a1fbbfa45981c3334ad84dff,
+    type: 3}
+  m_PrefabInstance: {fileID: 909692044173748563}
+  m_PrefabAsset: {fileID: 0}

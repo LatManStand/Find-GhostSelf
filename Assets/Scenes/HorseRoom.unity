@@ -4437,6 +4437,11 @@ PrefabInstance:
       objectReference: {fileID: 193188772}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
+      propertyPath: openAudioDoor
+      value: 
+      objectReference: {fileID: 517503795}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
       propertyPath: canvasCharacter
       value: 
       objectReference: {fileID: 799192556}
@@ -4636,6 +4641,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &517503795 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 103181529361807672, guid: 589abb28a1fbbfa45981c3334ad84dff,
+    type: 3}
+  m_PrefabInstance: {fileID: 517503791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &526403829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8178,6 +8189,80 @@ MonoBehaviour:
   - {x: -0.13314585, y: 1.7311637, z: 0}
   - {x: -0.7479389, y: 1.5480081, z: 0}
   - {x: -1.6084735, y: 1.1885216, z: 0}
+--- !u!1001 &1013951108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1103506714693149078, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: cameraFlash
+      value: 
+      objectReference: {fileID: 177149615}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -46.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152361, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103506714693152363, guid: 22a1e4823193daf4c8886a7c7aa8faad,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraF (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22a1e4823193daf4c8886a7c7aa8faad, type: 3}
 --- !u!1001 &1017183600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9462,7 +9547,7 @@ GameObject:
   - component: {fileID: 1229933043}
   - component: {fileID: 1229933045}
   - component: {fileID: 1229933044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sueloMaderaSola (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
