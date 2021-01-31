@@ -33,12 +33,17 @@ public class MenuPrincipalScript : MonoBehaviour
         video.SetActive(true);
         backgroud.SetActive(false);
         yield return new WaitForSeconds(3.0f);
-        GameManager.instance.LoadScene("Creditos");
+        GameManager.instance.LoadScene("Tutorial");
     }
 
     public void GoToCredits()
     {
         GameManager.instance.LoadScene("Creditos");
+    }
+    
+    public void GoToOptions()
+    {
+        GameManager.instance.LoadScene("Options");
     }
 
     public void QuitGame()

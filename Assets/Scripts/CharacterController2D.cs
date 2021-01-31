@@ -25,13 +25,14 @@ public class CharacterController2D : MonoBehaviour
 
     public GameObject particlesObj;
     public float fallHeightForParticles;
-    private float jumpStartHeight;
+    private float jumpStartHeight = -99999f;
     private Rigidbody2D rb;
     private float jumpMaxHeight;
     private GameObject instanciatedParticles;
 
     private AudioSource aS;
 
+    public bool aceptamosInput = true;
 
 
 
@@ -49,32 +50,35 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (CanJump)
+        if (aceptamosInput)
         {
-            wasGrounded = _grounded;
-            CheckJump();
-            _grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadious, whatIsGround);
-            if (!wasGrounded && _grounded && rb.velocity.y <= 0.1f)
+            if (CanJump)
             {
-                jumpStartHeight = -99999f;
-                aS.PlayOneShot(aS.clip);
-                if (jumpMaxHeight > transform.position.y + fallHeightForParticles)
+                wasGrounded = _grounded;
+                CheckJump();
+                _grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadious, whatIsGround);
+                if (!wasGrounded && _grounded && rb.velocity.y <= 0.1f)
                 {
-                    instanciatedParticles = Instantiate(particlesObj, groundCheck.transform.position, particlesObj.transform.rotation);
-                    instanciatedParticles.GetComponent<TimedDestroy>().CallDestroy();
-                    instanciatedParticles.GetComponent<ParticleSystem>().Play();
+                    jumpStartHeight = -99999f;
+                    aS.PlayOneShot(aS.clip);
+                    if (jumpMaxHeight > transform.position.y + fallHeightForParticles)
+                    {
+                        instanciatedParticles = Instantiate(particlesObj, groundCheck.transform.position, particlesObj.transform.rotation);
+                        instanciatedParticles.GetComponent<TimedDestroy>().CallDestroy();
+                        instanciatedParticles.GetComponent<ParticleSystem>().Play();
+                    }
+                }
+                else if (!_grounded && wasGrounded)
+                {
+                    jumpStartHeight = transform.position.y;
+                    StopCoroutine(nameof(HighestHeight));
+                    StartCoroutine(nameof(HighestHeight));
                 }
             }
-            else if (!_grounded && wasGrounded)
+            if (canMove)
             {
-                jumpStartHeight = transform.position.y;
-                StopCoroutine(nameof(HighestHeight));
-                StartCoroutine(nameof(HighestHeight));
+                CheckMovement();
             }
-        }
-        if (canMove)
-        {
-            CheckMovement();
         }
     }
 

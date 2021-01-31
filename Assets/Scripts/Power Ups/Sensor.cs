@@ -5,9 +5,7 @@ using UnityEngine;
 public class Sensor : MonoBehaviour
 {
     public Sprite onSprite;
-    public Color onColor;
     public Sprite offSprite;
-    public Color offColor;
     public float duration;
 
     private SpriteRenderer sr;
@@ -22,7 +20,6 @@ public class Sensor : MonoBehaviour
         if (collision.gameObject.CompareTag("Character"))
         {
             sr.sprite = onSprite;
-            sr.color = onColor;
         }
     }
 
@@ -38,7 +35,6 @@ public class Sensor : MonoBehaviour
     private void Deactivate()
     {
         sr.sprite = offSprite;
-        sr.color = offColor;
     }
 
 

@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public bool isCargarPartida;
 
 
+    public bool hasHorse = false;
+    public bool hasToothbrush = false;
+
     private void Awake()
     {
         Application.targetFrameRate = 300;
@@ -116,4 +119,7 @@ public class GameManager : MonoBehaviour
         this.language = lg;
         LoadScene("MainMenu");
     }
+
+
+
 }

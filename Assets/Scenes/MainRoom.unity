@@ -440,6 +440,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5786509552221196946, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5129266418941608962, guid: aa7d5417d445c4f4eb6056549ff4d155,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda2de2ff9fdd244fad4b18e38dc0efd, type: 3}
 --- !u!4 &223890660 stripped
@@ -628,6 +634,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fff1e245c858fa46aa6a8dc2d2fae2b, type: 3}
+--- !u!1 &303196217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 303196219}
+  - component: {fileID: 303196218}
+  m_Layer: 0
+  m_Name: LevelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &303196218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303196217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50f7b5eb17b7b04eb01a7c4c8b0bb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textos: []
+  textoPuerta:
+    textoo: 
+    duracion: 0
+    indexSigTexto: 0
+  canvasCharacter: {fileID: 0}
+  UIText: {fileID: 0}
+--- !u!4 &303196219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303196217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.779953, y: -0.37766987, z: -4.568525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &304637620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -798,6 +854,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1747828188, guid: 67fdc8139bb56724e86de1b9daebea29, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5947764516920209363, guid: aa7d5417d445c4f4eb6056549ff4d155,
+        type: 2}
     - target: {fileID: 1469185668574144012, guid: 67fdc8139bb56724e86de1b9daebea29,
         type: 3}
       propertyPath: m_Name
@@ -856,6 +917,46 @@ PrefabInstance:
     - target: {fileID: 2337031273262950855, guid: 67fdc8139bb56724e86de1b9daebea29,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170936477700401041, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170936477700401041, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170936477700401041, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170936477700401041, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170936477700401041, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170936477700401041, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452204310212568610, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7452204310212568610, guid: 67fdc8139bb56724e86de1b9daebea29,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7609955925067318813, guid: 67fdc8139bb56724e86de1b9daebea29,
@@ -7416,6 +7517,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Radio
       objectReference: {fileID: 0}
+    - target: {fileID: 7153855620194198501, guid: f66b10b2f98cbac48820b7623f34f1b4,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5947764516920209363, guid: aa7d5417d445c4f4eb6056549ff4d155,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f66b10b2f98cbac48820b7623f34f1b4, type: 3}
 --- !u!1 &1737887058

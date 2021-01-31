@@ -14,9 +14,16 @@ public class CameraF : MonoBehaviour
 
 
     private SpriteRenderer sr;
+    private AudioSource aS;
     private bool triggered = false;
     private float currentAlpha;
     private Color auxColor;
+
+
+    private void Start()
+    {
+        aS = GetComponent<AudioSource>();
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +31,7 @@ public class CameraF : MonoBehaviour
         if (!triggered && collision.gameObject.CompareTag("Character") && lastFlash + cooldown < Time.time)
         {
             triggered = true;
+            aS.PlayOneShot(aS.clip);
             lastFlash = Time.time;
             sr = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
             currentAlpha = initialAlpha;

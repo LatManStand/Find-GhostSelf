@@ -7,15 +7,17 @@ public class CameraUV : MonoBehaviour
 {
     public float duration;
     public Gradient colors;
+    public Sprite triggeredSprite;
 
     private bool triggered;
     private float timeTriggered;
-    //private SpriteRenderer sr;
-    private Light2D sr;
+    private SpriteRenderer sr;
+    public Light2D light;
 
     private void Start()
     {
-        sr = GetComponentInChildren<Light2D>();
+        light = GetComponentInChildren<Light2D>();
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,7 +36,7 @@ public class CameraUV : MonoBehaviour
         if (triggered && collision.gameObject.CompareTag("Character"))
         {
             CancelInvoke(nameof(Caught));
-            sr.color = colors.Evaluate(0);
+            light.color = colors.Evaluate(0);
             triggered = false;
 
         }
@@ -44,11 +46,12 @@ public class CameraUV : MonoBehaviour
     {
         if (Time.time < timeTriggered + duration)
         {
-            sr.color = colors.Evaluate((Time.time - timeTriggered) / duration);
+            light.color = colors.Evaluate((Time.time - timeTriggered) / duration);
         }
         else
         {
             //Pasan que cosas
+            sr.sprite = triggeredSprite;
 
         }
     }

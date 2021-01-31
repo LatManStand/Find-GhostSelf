@@ -915,6 +915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   language: 
   isCargarPartida: 0
+  hasHorse: 0
+  hasToothbrush: 0
 --- !u!4 &1265929609
 Transform:
   m_ObjectHideFlags: 0
@@ -1013,7 +1015,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 238814180}
         m_TargetAssemblyTypeName: MenuPrincipalScript, Assembly-CSharp
-        m_MethodName: CargarPartida
+        m_MethodName: GoToOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

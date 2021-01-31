@@ -12,7 +12,9 @@ public class WindowLight : MonoBehaviour
     private GameObject character;
     private SpriteRenderer sr;
     private Light2D demonLight;
-    private GameObject demon;
+    private GameObject rollazoLight;
+
+
     private CircleCollider2D col;
     private Color color;
 
@@ -45,9 +47,9 @@ public class WindowLight : MonoBehaviour
         {
             triggered = true;
             character = collision.transform.GetChild(0).gameObject;
-            demon = character.transform.GetChild(0).gameObject;
-            demon.SetActive(true);
-            demonLight = demon.GetComponent<Light2D>();
+            demonLight = character.transform.GetChild(0).gameObject.GetComponent<Light2D>();
+            rollazoLight = character.transform.parent.GetChild(2).gameObject;
+            rollazoLight.SetActive(true);
             sr = character.GetComponentInChildren<SpriteRenderer>();
         }
     }
@@ -59,8 +61,8 @@ public class WindowLight : MonoBehaviour
             color = sr.color;
             color.a = 0f;
             sr.color = color;
-            demon.SetActive(false);
             demonLight.intensity = 0f;
+            rollazoLight.SetActive(false);
             triggered = false;
         }
     }

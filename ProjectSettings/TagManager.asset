@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - GameManager
   - Box
+  - LevelController
   layers:
   - Default
   - TransparentFX

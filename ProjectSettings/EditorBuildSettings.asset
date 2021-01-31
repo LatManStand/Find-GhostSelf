@@ -12,9 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e1291cc8585b52741b85fe20cf8a1b03
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Options (WIP).unity
+    guid: 3ecccfaadbd8e7c45ab4f0aebe0eaef7
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: fca60efac8c0365408003ae3e6d8203e
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 906b8bec1fc015d43a817859314e726e
+  - enabled: 1
+    path: Assets/Scenes/MainRoom.unity
+    guid: 6496a400ce97ff7439fab2a1c5ff3954
+  - enabled: 1
+    path: Assets/Scenes/LightRoom.unity
+    guid: fc531f064d3ad9b4c9e70be5868c32cc
+  - enabled: 1
+    path: Assets/Scenes/HorseRoom.unity
+    guid: 5742c141e432fc8448f313d3c7fc1eff
+  - enabled: 1
+    path: Assets/Scenes/Ending (WIP).unity
+    guid: 4a542cee4daa086469e38fb4265c11a6
   m_configObjects: {}

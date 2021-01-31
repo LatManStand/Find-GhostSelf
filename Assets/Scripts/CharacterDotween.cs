@@ -7,7 +7,6 @@ public class CharacterDotween : MonoBehaviour
 {
     public float sway;
     public float duration;
-    public GameObject other;
     private SpriteRenderer sr;
     void Start()
     {
