@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public bool hasToothbrush = false;
     public AudioSource audiosrc;
 
+    public Scene lastScene;
+
     private void Awake()
     {
         Application.targetFrameRate = 300;
