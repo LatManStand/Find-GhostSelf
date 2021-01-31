@@ -20,7 +20,7 @@ public class CreditosSystem : MonoBehaviour
     IEnumerator Animation()
     {
         texto.SetActive(true);
-        yield return new WaitForSeconds(40f);
+        yield return new WaitForSeconds(50f);
         texto.SetActive(false);
         button.SetActive(true);
         button2.SetActive(true);
