@@ -1404,6 +1404,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.9, y: 0.97}
   m_EdgeRadius: 0
+--- !u!114 &193188772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5845048445154719882, guid: 67fdc8139bb56724e86de1b9daebea29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251308160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &197650666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3767,6 +3779,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
         type: 3}
+      propertyPath: UIText
+      value: 
+      objectReference: {fileID: 193188772}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
+      propertyPath: canvasCharacter
+      value: 
+      objectReference: {fileID: 799192556}
+    - target: {fileID: 9017066448030020143, guid: 589abb28a1fbbfa45981c3334ad84dff,
+        type: 3}
       propertyPath: textos.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -5327,6 +5349,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 710086646}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &725622877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5631593038954683920, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631593038954683922, guid: bda2de2ff9fdd244fad4b18e38dc0efd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bda2de2ff9fdd244fad4b18e38dc0efd, type: 3}
 --- !u!1001 &770643195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5644,6 +5735,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.9, y: 0.97}
   m_EdgeRadius: 0
+--- !u!1 &799192556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1107470774155767235, guid: 67fdc8139bb56724e86de1b9daebea29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251308160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &807102205
 GameObject:
   m_ObjectHideFlags: 0
@@ -6286,6 +6383,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 517503792}
+        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
+        m_MethodName: LanzaTexto
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &883032945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6296,7 +6405,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
