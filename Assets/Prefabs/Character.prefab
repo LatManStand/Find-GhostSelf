@@ -420,7 +420,7 @@ MonoBehaviour:
   CanJump: 1
   jumpAxis: Jump
   jumpForce: 150
-  hasDoubleJump: 1
+  hasDoubleJump: 0
   _grounded: 0
   groundCheck: {fileID: 1050321720134236680}
   whatIsGround:
