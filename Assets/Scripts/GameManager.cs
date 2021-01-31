@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string nameLevel)
     {
         lastScene = SceneManager.GetActiveScene();
-        if (nameLevel.Equals("Ending"))
+        if (nameLevel.Equals("Ending") || nameLevel.Equals("Creditos"))
         {
             audiosrc.Stop();
         }

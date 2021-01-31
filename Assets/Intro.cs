@@ -16,6 +16,6 @@ public class Intro : MonoBehaviour
     {
         video.SetActive(true);
         yield return new WaitForSeconds(98.0f);
-        GameManager.instance.LoadScene("MainRoom");
+        GameManager.instance.LoadScene("Tutorial");
     }
 }
