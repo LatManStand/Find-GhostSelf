@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string nameLevel)
     {
+        lastScene = SceneManager.GetActiveScene();
         if (nameLevel.Equals("Ending"))
         {
             audiosrc.Stop();
