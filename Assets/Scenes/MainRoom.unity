@@ -14997,7 +14997,7 @@ MonoBehaviour:
   eventos:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683553311}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: loadScene
         m_Mode: 5
@@ -21633,7 +21633,7 @@ MonoBehaviour:
   eventos:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 683553311}
         m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: playSound
         m_Mode: 1
