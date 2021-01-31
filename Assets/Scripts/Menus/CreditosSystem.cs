@@ -20,17 +20,20 @@ public class CreditosSystem : MonoBehaviour
     IEnumerator Animation()
     {
         texto.SetActive(true);
-        yield return new WaitForSeconds(34f);
+        yield return new WaitForSeconds(40f);
         texto.SetActive(false);
         button.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
         button2.SetActive(true);
-        button.SetActive(false);
     }
 
 
     public void volverAlMenuPrincipal()
     {
         GameManager.instance.LoadScene("MainMenu");
+    }
+
+    public void Exit()
+    {
+        GameManager.instance.QuitGame();
     }
 }
