@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf625e8e1294a04a94f01c31e66c70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSprite: {fileID: 21300000, guid: 25ab559cabb02cc4a95b604b1a9edc72, type: 3}
-  offSprite: {fileID: 21300000, guid: dd1af63523aa10c46b2fcc15131e7b69, type: 3}
-  duration: 1
+  onSprite: {fileID: 21300000, guid: dd1af63523aa10c46b2fcc15131e7b69, type: 3}
+  offSprite: {fileID: 21300000, guid: 25ab559cabb02cc4a95b604b1a9edc72, type: 3}
+  duration: 2
